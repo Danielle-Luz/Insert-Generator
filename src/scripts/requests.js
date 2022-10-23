@@ -7,6 +7,8 @@ export async function getRequestData (data) {
         body: JSON.stringify(data)
     });
 
+    console.log(response.status)
+
     return await response.json();
 }
 

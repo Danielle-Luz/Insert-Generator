@@ -5,22 +5,29 @@ function addEventToForm () {
     
     form.addEventListener("submit", async event => {
         event.preventDefault();
+
         if (document.querySelector(".form-group") != null) {
-            const insertCodeElement = document.querySelector(".code-block pre");
             const registersNumber = parseInt(document.getElementById("registers-number").value);
-            const tableName = document.getElementById("table-name").value;
-    
+
             const fieldsData = getDataFromForm();
     
             fieldsData["_repeat"] = registersNumber;
-            
-            const requestData = buildRequestData(fieldsData, registersNumber);
-    
-            const responseData = await getRequestData(requestData);
-    
-            const insert = createInserts(responseData, tableName);
 
-            insertCodeElement.innerHTML = insert;
+            const requestData = buildRequestData(fieldsData, registersNumber);
+
+            const responseData = await getRequestData(requestData);
+
+            const insertCodeElement = document.querySelector(".code-block pre");
+
+            if (responseData) {
+                const tableName = document.getElementById("table-name").value;
+        
+                const insert = createInserts(responseData, tableName);
+    
+                insertCodeElement.innerHTML = insert;
+            } else {
+                insertCodeElement.innerHTML = "Não foi possível obter os dados para criar o insert.";
+            }
         } else {
             toggleTooltip();
         }
