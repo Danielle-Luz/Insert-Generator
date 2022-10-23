@@ -137,20 +137,15 @@ function createInserts (data, tableName) {
     });
 
     data.forEach(
-    (register, index) => {
+    register => {
         const registerValues = Object.values(register);
         values += `(`;
 
         registerValues.forEach(
         (value, index)=> {
-            const pattern = /1-9/g;
-
-            const onlyNumbers = pattern.test(value);
-
             if (index != 0) values += ", ";
 
-            if (onlyNumbers) values += value;
-            else values += `'${value}'`;
+            values += `'${value}'`;
         });
 
 
