@@ -102,7 +102,7 @@ function addNewColumnEvent () {
             </option>
         </select>
         `;
-        deleteButton.innerHTML = `<img src="../../assets/imgs/trash.svg" alt="icone de lixeira">`;
+        deleteButton.innerHTML = `<img src="assets/imgs/trash.svg" alt="icone de lixeira">`;
 
         deleteButton.addEventListener("click",
         () => {
