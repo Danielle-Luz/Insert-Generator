@@ -8,6 +8,7 @@ function addEventToForm () {
         if (document.querySelector(".form-group") != null) {
             const insertCodeElement = document.querySelector(".code-block pre");
             const registersNumber = parseInt(document.getElementById("registers-number").value);
+            const tableName = document.getElementById("table-name").value;
     
             const fieldsData = getDataFromForm();
     
@@ -17,7 +18,7 @@ function addEventToForm () {
     
             const responseData = await getRequestData(requestData);
     
-            const insert = createInserts(responseData);
+            const insert = createInserts(responseData, tableName);
 
             insertCodeElement.innerHTML = insert;
         } else {
@@ -64,16 +65,16 @@ function addNewColumnEvent () {
                 Nome (pessoa)
             </option>
             <option value="nameLast">
-                Sobrenome (pessoa)
+                Sobrenome
             </option>
             <option value="name">
                 Nome completo
             </option>
             <option value="phoneMobile">
-                Telefone
+                Celular
             </option>
             <option value="personGender">
-                Gênero
+                Sexo
             </option>
             <option value="internetEmail">
                 Email
@@ -85,7 +86,7 @@ function addNewColumnEvent () {
                 Estado
             </option>
             <option value="addressCity">
-                Estado
+                Cidade
             </option>
             <option value="addressZipCode">
                 CEP
@@ -115,7 +116,7 @@ function addNewColumnEvent () {
     });
 }
 
-function createInserts (data) {
+function createInserts (data, tableName) {
     let fields = ``;
     let values = ``;
     let insert = ``;
@@ -157,7 +158,7 @@ function createInserts (data) {
     });
 
     insert =
-    `INSERT INTO (${fields})\nVALUES\n${values}`;
+    `INSERT INTO ${tableName}\n(${fields})\nVALUES\n${values}`;
     
     insert = insert.substring(0, insert.length - 2) + ";";
 

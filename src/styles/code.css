@@ -4,4 +4,11 @@
     color: var(--color-grey-6);
     padding: 1.25rem;
     width: 100%;
+    white-space: normal;
+}
+
+.code-block pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
 }
