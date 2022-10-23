@@ -1,0 +1,51 @@
+button {
+    border-radius: var(--radius-1);
+    cursor: pointer;
+    color: var(--color-grey-6);
+    padding: var(--spacing-1);
+    transition: 0.5s;
+}
+
+input,
+select {
+    outline: none;
+}
+
+.form-1 {
+    max-width: 450px;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-element {
+    background-color: var(--color-grey-2);
+    border: 0.0625rem solid var(--color-grey-3);
+    border-radius: var(--radius-1);
+    color: var(--color-grey-5);
+    height: 40px;
+    padding-inline: 0.625rem;
+    width: 100%;
+}
+
+.form-element:focus {
+    border-color: var(--color-grey-6);
+}
+
+.form-group {
+    gap: 1rem;
+}
+
+.button-brand {
+    background-color: var(--color-brand-1);
+    border: none;
+    width: 100%;
+}
+
+.button-brand:hover {
+    background-color: var(--color-brand-2);
+}
+
+.button-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-grey-6);
+}

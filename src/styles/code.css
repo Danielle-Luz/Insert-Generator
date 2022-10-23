@@ -1,0 +1,7 @@
+.code-block {
+    background-color: var(--color-grey-4);
+    border-radius: var(--radius-1);
+    color: var(--color-grey-6);
+    padding: 1.25rem;
+    width: 100%;
+}

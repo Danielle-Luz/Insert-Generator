@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Insert generator</title>
+        <link rel="stylesheet" href="../../styles/flex.css">
+        <link rel="stylesheet" href="../../styles/forms.css">
+        <link rel="stylesheet" href="../../styles/texts.css">
+        <link rel="stylesheet" href="../../styles/globals.css">
+        <link rel="stylesheet" href="../../styles/code.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="../../styles/media.css">
+        <script src="index.js" defer></script>
+    </head>
+    <body class="align-center d-flex justify-center">
+        <div class="align-center d-flex flex-column justify-center form-wrapper">
+            <h1 class="title-1">Insert generator</h1>
+            <form class="d-flex flex-column form-1" id="form-fields">
+                <div class="d-flex form-group">
+                    <input type="text" class="form-element text-1">
+                    <select class="form-element text-1">
+                        <option value="nameFirst">
+                            Nome (pessoa)
+                        </option>
+                        <option value="nameLast">
+                            Sobrenome (pessoa)
+                        </option>
+                        <option value="nameFirst+nameLast">
+                            Nome completo
+                        </option>
+                        <option value="phone">
+                            Telefone
+                        </option>
+                        <option value="internetEmail">
+                            Email
+                        </option>
+                        <option value="adressFullStreet">
+                            Endereço
+                        </option>
+                        <option value="companyName">
+                            Nome de empresa
+                        </option>
+                    </select>
+                </div>
+                <button type="button" class="button-outline text-1" id="new-column">Nova coluna</button>
+                <button type="submit" class="button-brand text-1">Gerar insert</button>
+            </form>
+<code class="code-block text-1">
+<pre>
+INSERT INTO (col, col, col)
+VALUES
+()
+</pre>
+</code>
+        </div>
+    </body>
+</html>

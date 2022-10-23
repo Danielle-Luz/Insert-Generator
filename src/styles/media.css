@@ -1,0 +1,16 @@
+@media (max-width: 850px) {
+    body {
+        flex-direction: column;
+    }
+    
+}
+@media (max-width: 420px) {
+    .form-group {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .form-element {
+        box-sizing: border-box;
+    }
+}

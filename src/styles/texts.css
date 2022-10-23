@@ -1,0 +1,8 @@
+.title-1 {
+    color: var(--color-grey-6);
+    font-size: var(--title-1);
+}
+
+.text-1 {
+    font-size: var(--text-1);
+}
