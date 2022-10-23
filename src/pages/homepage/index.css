@@ -3,5 +3,7 @@
 }
 
 .form-wrapper {
-   gap: 3rem;
+    gap: 3rem;
+    max-width: 500px;
+    width: 100%;
 }

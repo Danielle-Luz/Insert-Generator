@@ -11,6 +11,7 @@ body {
     background-color: var(--color-grey-1);
     height: max-content;
     min-height: 100vh;
+    overflow-x: hidden;
     padding: 3.125rem;
     width: 100%;
 }
@@ -27,9 +28,14 @@ body {
 
     --title-1: 1.875rem;
     --text-1: 1rem;
+    --text-2: 0.875rem;
 
     --radius-1: 0.5rem;
     --radius-2: 0.25rem;
 
     --spacing-1: 0.625rem;
+}
+
+.d-none {
+    display: none;
 }

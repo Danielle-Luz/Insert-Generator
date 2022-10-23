@@ -1,0 +1,41 @@
+.tooltip {
+    animation: show ease 1s;
+    background-color: var(--color-grey-3);
+    border-radius: var(--radius-1);
+    top: 1.5625rem;
+    right: 1.5625rem;
+    max-width: 300px;
+    height: 80px;
+    width: 100%;
+}
+
+.tooltip p {
+    align-items: center;
+    color: var(--color-grey-6);
+    display: flex;
+    font-size: var(--text-2);
+}
+
+.tooltip p::before {
+    content: url(https://img.icons8.com/sf-regular/35/E74C3C/box-important.png);
+    margin-right: 0.625rem;
+}
+
+@keyframes show {
+    0% {
+        right: -10.25rem;
+    }
+    100% {
+        right: 1.5625rem;
+    }
+}
+
+@keyframes hide {
+    0% {
+        right: 1.5625rem;
+    }
+    100% {
+        right: -20.25rem;
+    }
+}
+

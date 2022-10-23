@@ -10,39 +10,63 @@
         <link rel="stylesheet" href="../../styles/texts.css">
         <link rel="stylesheet" href="../../styles/globals.css">
         <link rel="stylesheet" href="../../styles/code.css">
+        <link rel="stylesheet" href="../../styles/positions.css">
+        <link rel="stylesheet" href="../../styles/tooltip.css">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="../../styles/media.css">
-        <script src="index.js" defer></script>
+        <script type="module" src="index.js" defer></script>
     </head>
-    <body class="align-center d-flex justify-center">
+    <body class="align-center d-flex justify-center position-relative">
         <div class="align-center d-flex flex-column justify-center form-wrapper">
             <h1 class="title-1">Insert generator</h1>
             <form class="d-flex flex-column form-1" id="form-fields">
+                <input type="number" class="form-element text-1" placeholder="Número de registros" aria-label="número de registros" id="registers-number" value="1" required>
                 <div class="d-flex form-group">
-                    <input type="text" class="form-element text-1">
-                    <select class="form-element text-1">
+                    <input type="text" class="form-element text-1" aria-label="nome do campo" placeholder="Nome do campo" autocomplete="off" required>
+                    <select class="form-element text-1" aria-label="tipo do campo">
                         <option value="nameFirst">
                             Nome (pessoa)
                         </option>
                         <option value="nameLast">
                             Sobrenome (pessoa)
                         </option>
-                        <option value="nameFirst+nameLast">
+                        <option value="name">
                             Nome completo
                         </option>
-                        <option value="phone">
+                        <option value="phoneMobile">
                             Telefone
+                        </option>
+                        <option value="personGender">
+                            Gênero
                         </option>
                         <option value="internetEmail">
                             Email
                         </option>
-                        <option value="adressFullStreet">
-                            Endereço
+                        <option value="addressStreetName">
+                            Rua
+                        </option>
+                        <option value="addressState">
+                            Estado
+                        </option>
+                        <option value="addressCity">
+                            Estado
+                        </option>
+                        <option value="addressZipCode">
+                            CEP
+                        </option>
+                        <option value="productName">
+                            Nome de produto
                         </option>
                         <option value="companyName">
                             Nome de empresa
                         </option>
-                    </select>
+                        <option value="date">
+                            Data
+                        </option>
+                    </select required>
+                    <button class="align-center d-flex delete-button justify-center form-element" aria-label="botão de exclusão">
+                        <img src="../../assets/imgs/trash.svg" alt="icone de lixeira">
+                    </button>
                 </div>
                 <button type="button" class="button-outline text-1" id="new-column">Nova coluna</button>
                 <button type="submit" class="button-brand text-1">Gerar insert</button>
