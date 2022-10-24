@@ -6,11 +6,16 @@
 </p>
 
 <p align="center">
+    • <a href="#Como acessar">Como acessar</a>
     • <a href="#descricao">Descrição</a>
     • <a href="#funcionalidades">Funcionalidades</a>
     • <a href="#tecnologias">Tecnologias</a>
     • <a href="#Desenvolvedora">Desenvolvedora</a>
 </p>
+
+<h2 id="Como acessar"> :computer_mouse: Como acessar?</h2>
+
+Confira e utilize o projeto no <a href="https://danielle-luz.github.io/Insert-Generator/">github pages</a>.
 
 
 <h2 id="descricao">:pencil2: Descrição</h2>
